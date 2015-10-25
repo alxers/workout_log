@@ -1,0 +1,7 @@
+<h1> hello </h1>
+<p>
+  <%= link_to 'New workout', new_workout_path %>
+</p>
+<% @workouts.each do |w| %>
+  <%= w %>
+<% end %>
