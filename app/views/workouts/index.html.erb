@@ -3,5 +3,5 @@
   <%= link_to 'New workout', new_workout_path %>
 </p>
 <% @workouts.each do |w| %>
-  <%= w %>
+  Name: <%= w.name %>, length: <%= w.length %> <br>
 <% end %>
