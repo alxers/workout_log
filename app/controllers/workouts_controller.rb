@@ -12,13 +12,17 @@ class WorkoutsController < ApplicationController
   end
 
   def edit
+    @workout = find_workout
   end
 
   def create
     @workout = Workout.new(workout_params)
 
-    @workout.save
-    redirect_to @workout
+    if @workout.save
+      redirect_to @workout
+    else
+      render 'new'
+    end
   end
 
   def update

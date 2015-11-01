@@ -1,4 +1,13 @@
 <%= form_for :workout, url: workouts_path do |f| %>
+
+  <% if @workout.errors.any? %>
+    <ul>
+      <% @workout.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -6,10 +15,12 @@
 
   <p>
     <%= f.label :datetime %><br>
-    <%= f.datetime_select :datetime %>
+    <%= f.datetime_select :created_at %>
   </p>
 
   <p>
     <%= f.submit 'Create workout' %>
   </p>
 <% end %>
+
+<%= link_to 'Back', workouts_path %>
