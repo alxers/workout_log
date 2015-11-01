@@ -1,3 +1,6 @@
 <%= @workout.title %><br>
 <%= @workout.created_at %><br>
 <%= @workout.length %>
+
+<%= link_to 'Edit', edit_workout_path %>
+<%= link_to 'All workouts', workouts_path %>

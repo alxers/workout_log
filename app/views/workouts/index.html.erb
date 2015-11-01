@@ -3,5 +3,6 @@
   <%= link_to 'New workout', new_workout_path %>
 </p>
 <% @workouts.each do |w| %>
-  Name: <%= w.title %>, length: <%= w.length %> <br>
+  Name: <%= link_to w.title, w %>, length: <%= w.length %>
+        <%= link_to 'Delete', workout_path(w), method: :delete, data: { confirm: 'Are you sure?' } %><br>
 <% end %>
