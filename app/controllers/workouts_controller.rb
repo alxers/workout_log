@@ -21,6 +21,6 @@ class WorkoutsController < ApplicationController
   private
 
     def workout_params
-      params.require(:workout).permit(:name, :length)
+      params.require(:workout).permit(:title, :length)
     end
 end
