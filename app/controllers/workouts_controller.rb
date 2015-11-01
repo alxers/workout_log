@@ -11,11 +11,20 @@ class WorkoutsController < ApplicationController
   def new
   end
 
+  def edit
+  end
+
   def create
     @workout = Workout.new(workout_params)
 
     @workout.save
     redirect_to @workout
+  end
+
+  def update
+  end
+
+  def destroy
   end
 
   private
