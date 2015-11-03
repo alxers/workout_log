@@ -1,6 +1,13 @@
+<%= content_for :short_workout_counter do %>
+    <%= javascript_include_tag 'short_workout_counter' %>
+<% end %>
+
 <%= @workout.title %><br>
 <%= @workout.created_at %><br>
 <%= @workout.length %>
+
+<div class="js-short-workout-counter">
+</div>
 
 <%= link_to 'Edit', edit_workout_path %>
 <%= link_to 'All workouts', workouts_path %>

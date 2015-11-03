@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://mirror.ops.rhcloud.com/mirror/ruby/
   specs:
     actionmailer (4.1.8)
       actionpack (= 4.1.8)
@@ -128,3 +128,6 @@ DEPENDENCIES
   turbolinks
   tzinfo-data
   uglifier (>= 1.3.0)
+
+BUNDLED WITH
+   1.10.6
