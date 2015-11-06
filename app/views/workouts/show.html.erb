@@ -1,4 +1,6 @@
-<%= javascript_include_tag 'short_workout_counter' %>
+<% content_for :workout_counter do %>
+  <%= javascript_include_tag 'pages/workout_counter' %>
+<% end %>
 
 
 <%= @workout.title %><br>
@@ -6,6 +8,7 @@
 <%= @workout.length %>
 
 <div class="js-workout-counter">
+    1
 </div>
 
 <%= link_to 'Edit', edit_workout_path %>
