@@ -1,4 +1,11 @@
 .js-workout-counter {
-  font-size: 160px;
   text-align: center;
+}
+
+.js-workout-counter__time {
+  font-size: 140px;
+}
+
+.js-workout-counter__sets {
+  font-size: 80px;
 }
