@@ -15,6 +15,10 @@ function getRestText() {
   return 'Resting';
 }
 
+function getExerciseText() {
+  return 'Exercising';
+}
+
 function incrementer() {
   var count = 1;
   var sets = 0;
@@ -23,13 +27,14 @@ function incrementer() {
   setInterval(function() {
     count += 1;
     if (isResting && count > restTime()) {
-      count = 0;
+      count = 1;
       getTimeCounterTextEl().innerHTML = '';
+      getTimeCounterTextEl().innerHTML = getExerciseText();
       isResting = false;
     }
 
     if (!isResting && count > exerciseTime()) {
-      count = 0;
+      count = 1;
       sets += 1;
       getSetsCounterEl().innerHTML = sets;
       getTimeCounterTextEl().innerHTML = getRestText();
@@ -56,5 +61,6 @@ function getTimeCounterTextEl() {
 }
 
 function makeCounter() {
+  getTimeCounterTextEl().innerHTML = getExerciseText();
   incrementer();
 }
