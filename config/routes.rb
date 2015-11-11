@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :workouts
+  resources :workouts do
+    resources :comments
+  end
 
   root 'workouts#index'
 end
