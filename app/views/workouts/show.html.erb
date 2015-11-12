@@ -7,6 +7,27 @@
 <%= @workout.created_at %><br>
 <%= @workout.length %>
 
+<p>
+  Add exercise:
+</p>
+<%= form_for([@workout, @workout.exercises.build]) do |f|  %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :sets %><br>
+    <%= f.text_field :sets %>
+  </p>
+  <p>
+    <%= f.label :reps %><br>
+    <%= f.text_field :reps %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 <div class="js-workout-counter">
   <span class="js-workout-counter__time--text"></span>
   <span class="js-workout-counter__time">1</span>
