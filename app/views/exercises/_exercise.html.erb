@@ -1,9 +1,14 @@
-  <p>
-    <%= exercise.title %>
-  </p>
-  <p>
-    <%= exercise.sets %>
-  </p>
-  <p>
-    <%= exercise.reps %>
-  </p>
+<p>
+  <%= exercise.title %>
+</p>
+<p>
+  <%= exercise.sets %>
+</p>
+<p>
+  <%= exercise.reps %>
+</p>
+<p>
+  <%= link_to 'Delete exercise', [exercise.workout, exercise],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>
