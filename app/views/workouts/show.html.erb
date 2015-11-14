@@ -7,6 +7,19 @@
 <%= @workout.created_at %><br>
 <%= @workout.length %>
 
+<h2>Exercises</h2>
+<% @workout.exercises.each do |exercise| %>
+  <p>
+    <%= exercise.title %>
+  </p>
+  <p>
+    <%= exercise.sets %>
+  </p>
+  <p>
+    <%= exercise.reps %>
+  </p>
+<% end %>
+
 <p>
   Add exercise:
 </p>
