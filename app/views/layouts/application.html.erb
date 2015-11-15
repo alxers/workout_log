@@ -7,10 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
-<%= content_for :workout_counter %>
-
+  <%= render 'layouts/header' %>
+  <div class="site-content">
+    <%= yield %>
+    <%= content_for :workout_counter %>
+  </div>
 </body>
 </html>

@@ -1,0 +1,50 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f2f1ed;
+  color: #363431;
+  font-family: Georgia, Times, serif;
+  font-size: 17px;
+  font-size: 1.7rem;
+  /*line-height: 2;*/
+}
+
+header {
+  background: #fAf9f5;
+  border-bottom: 1px solid #d9d6d0;
+  min-height: 2.2em;
+  position: relative;
+  width: 100%;
+}
+
+.site-nav {
+  margin: 0 auto;
+  max-width: 680px;
+  line-height: 2;
+}
+
+.site-nav__link {
+  color: #932817;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.site-content {
+  background: #faf9f5;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.05); 
+  padding: 3em 3em 1em;
+  margin: 4rem auto;
+  max-width: 680px;
+}
+
+.created-at {
+  color: #a09a92;
+  border-bottom: 1px solid #d9d6d0;
+  font-family: 'Libre Baskerville', Baskerville, 'Book Antiqua', Georgia, Times, serif;
+  /*font-size: 17px;*/
+  font-style: italic;
+  font-weight: normal;
+}
