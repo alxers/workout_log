@@ -2,7 +2,7 @@
 // TODO: refactor
 
 //document.addEventListener('DOMContentLoaded', makeCounter);
-getStartStopBtn().addEventListener('click', startOrStopCounter);
+getStartBtn().addEventListener('click', startCounter);
 
 function restTime() {
   return 30;
@@ -72,13 +72,7 @@ function makeCounter() {
   incrementer();
 }
 
-function startOrStopCounter(e) {
-  var btnData = e.currentTarget.dataset;
-  if (btnData.action === 'stopped') {
-    getTimeCounterTextEl().innerHTML = getExerciseText();
-    incrementer();
-    btnData.action = 'started'
-  } else {
-    clearInterval(incrementer());
-  }
+function startCounter() {
+  getTimeCounterTextEl().innerHTML = getExerciseText();
+  incrementer();
 }
