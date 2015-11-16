@@ -1,7 +1,8 @@
 // Counter
 // TODO: refactor
 
-document.addEventListener('DOMContentLoaded', makeCounter);
+//document.addEventListener('DOMContentLoaded', makeCounter);
+getStartBtn().addEventListener('click', startCounter);
 
 function restTime() {
   return 30;
@@ -24,7 +25,7 @@ function incrementer() {
   var sets = 0;
   var isResting = false;
 
-  setInterval(function() {
+  var intervalId = setInterval(function() {
     count += 1;
     if (isResting && count > restTime()) {
       count = 1;
@@ -42,6 +43,8 @@ function incrementer() {
     }
     getTimeCounterEl().innerHTML = count;
   }, 1000);
+
+  return intervalId;
 }
 
 function getEl(elClass) {
@@ -60,7 +63,16 @@ function getTimeCounterTextEl() {
   return getEl('.js-workout-counter__time--text');
 }
 
+function getStartStopBtn() {
+  return getEl('.js-workout-counter__btn');
+}
+
 function makeCounter() {
+  getTimeCounterTextEl().innerHTML = getExerciseText();
+  incrementer();
+}
+
+function startCounter() {
   getTimeCounterTextEl().innerHTML = getExerciseText();
   incrementer();
 }
