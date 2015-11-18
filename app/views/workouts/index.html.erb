@@ -1,8 +1,7 @@
-<h1> hello </h1>
-<p>
-  <%= link_to 'New workout', new_workout_path %>
-</p>
-<% @workouts.each do |w| %>
-  Name: <%= link_to w.title, w %>, length: <%= w.length %>
-        <%= link_to 'Delete', workout_path(w), method: :delete, data: { confirm: 'Are you sure?' } %><br>
-<% end %>
+<script type="text/ng-template" id="workouts.html">
+  <%= render template: 'workouts/templates/workouts' %>
+</script>
+
+<div ng-app="WorkoutApp">
+  <div ng-view=true></div>
+</div>

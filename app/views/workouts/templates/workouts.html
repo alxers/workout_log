@@ -1,0 +1,11 @@
+<h1> hello </h1>
+<p>
+  <a href="/workouts/new">New workout</a>
+</p>
+<ul>
+  <li ng-repeat="workout in workouts">
+    <a href="/workouts/{{ workout.id }}">{{ workout.title }}</a>
+    <span>length: {{ workout.length }}</span>
+    <a href="#" ng-click="removeWorkout">Delete</a>
+  </li>
+</ul>

@@ -2,6 +2,11 @@ class WorkoutsController < ApplicationController
 
   def index
     @workouts = Workout.all
+
+    respond_to do |format|
+      format.json { render json: @workouts }
+      format.html { render 'index' }
+    end
   end
 
   def show
