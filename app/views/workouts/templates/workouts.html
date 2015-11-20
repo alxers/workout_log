@@ -6,6 +6,6 @@
   <li ng-repeat="workout in workouts">
     <a href="/workouts/{{ workout.id }}">{{ workout.title }}</a>
     <span>length: {{ workout.length }}</span>
-    <a href="#" ng-click="removeWorkout">Delete</a>
+    <a href="#" ng-click="removeWorkout()">Delete</a>
   </li>
 </ul>

@@ -1,8 +1,8 @@
-var workoutsController = angular.module('workoutsController', []);
+// var workoutsController = angular.module('workoutsController', []);
 
-workoutsController.controller('WorkoutsCtrl', ['$scope', 'Workout','$routeParams',
-  function($scope, Workout, $routeParams) {
-    $scope.workouts = Workout.query();
+angular.module('WorkoutApp').controller('WorkoutsCtrl', ['$scope', 'WorkoutService','$routeParams',
+  function($scope, WorkoutService, $routeParams) {
+    $scope.workouts = WorkoutService.query();
     $scope.removeWorkout = function() { console.log('!!!') };
   }
 ]);

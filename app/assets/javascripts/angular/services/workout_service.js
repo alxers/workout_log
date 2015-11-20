@@ -1,6 +1,4 @@
-var workoutServices = angular.module('workoutServices', ['ngResource']);
-
-workoutServices.factory('Workout', ['$resource',
+angular.module('WorkoutApp.services').factory('WorkoutService', ['$resource',
   function($resource){
     return $resource('workouts/:id.json');
   }]);

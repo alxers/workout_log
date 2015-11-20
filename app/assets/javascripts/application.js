@@ -12,4 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require angular/app
+
+// Libraries
+//= require angular
+//= require angular-route
+//= require angular-resource
+
+// App related
+//= require angular/modules
+//= require angular/services/workout_service
+//= require angular/controllers/workouts_controller
+//= require angular/routes
