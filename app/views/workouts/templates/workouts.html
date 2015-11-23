@@ -3,6 +3,7 @@
 </p>
 <ul>
   <li ng-repeat="workout in workouts">
+    <span>Created at {{ workout.created_at | date : format : timezone }}</span>
     <a href="/workouts/{{ workout.id }}">{{ workout.title }}</a>
     <span>length: {{ workout.length }}</span>
     <a href="#" ng-click="removeWorkout()">Delete</a>
