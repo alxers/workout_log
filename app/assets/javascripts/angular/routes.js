@@ -6,6 +6,10 @@ angular.module('WorkoutApp').config(['$routeProvider', '$locationProvider',
         templateUrl: 'workouts.html',
         controller: 'WorkoutsCtrl'
       }).
+      when('/workouts/:id',{
+          templateUrl: 'workout.html',
+          controller: 'WorkoutsCtrl'
+      }).
       otherwise({
         redirectTo: '/workouts'
       });

@@ -11,6 +11,11 @@ class WorkoutsController < ApplicationController
 
   def show
     @workout = find_workout
+
+    respond_to do |format|
+      format.json { render json: @workout }
+      format.html { render 'index' }
+    end
   end
 
   def new
