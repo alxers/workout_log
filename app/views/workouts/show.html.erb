@@ -1,27 +1,9 @@
-<% content_for :workout_counter do %>
-  <%= javascript_include_tag 'pages/workout_counter' %>
-<% end %>
 
 
-<%= @workout.title %><br>
-<%= @workout.created_at %><br>
-<%= @workout.length %>
+<script type="text/ng-template" id="workout.html">
+  <%= render template: 'workouts/templates/workout' %>
+</script>
 
-<h2>Exercises</h2>
-<%= render @workout.exercises %>
-
-<p>
-  Add exercise:
-</p>
-<%= render 'exercises/form' %>
-
-<div class="js-workout-counter">
-  <span class="js-workout-counter__time--text"></span>
-  <span class="js-workout-counter__time">1</span>
-  <span class="js-workout-counter__sets--text">Sets:</span>
-  <span class="js-workout-counter__sets">0</span>
-  <button class="js-workout-counter__btn">Start</button>
-</div>
-
-<%= link_to 'Edit', edit_workout_path %>
-<%= link_to 'All workouts', workouts_path %>
+<!-- <div ng-app="WorkoutApp">
+  <div ng-view=true></div>
+</div> -->

@@ -14,7 +14,7 @@ class WorkoutsController < ApplicationController
 
     respond_to do |format|
       format.json { render json: @workout }
-      format.html { render 'index' }
+      format.html { render 'show' }
     end
   end
 

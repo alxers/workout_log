@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   end
 
   root 'workouts#index'
+  # get 'workouts/:id', to: 'workouts#show'
 end

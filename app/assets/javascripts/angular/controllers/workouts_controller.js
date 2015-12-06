@@ -1,6 +1,11 @@
-angular.module('WorkoutApp').controller('WorkoutsCtrl', ['$scope', 'WorkoutService','$routeParams',
-  function($scope, WorkoutService, $routeParams) {
+angular.module('WorkoutApp').controller('WorkoutsCtrl', ['$scope', 'WorkoutService',
+  function($scope, WorkoutService) {
     $scope.workouts = WorkoutService.query();
-    $scope.removeWorkout = function() { console.log('!!!') };
+  }
+]);
+
+angular.module('WorkoutApp').controller('WorkoutCtrl', ['$scope', 'WorkoutService','$routeParams',
+  function($scope, WorkoutService, $routeParams) {
+    $scope.workout = WorkoutService.get({ workoutId: $routeParams.workoutId});
   }
 ]);
