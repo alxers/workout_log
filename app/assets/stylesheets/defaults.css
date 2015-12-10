@@ -13,12 +13,18 @@ h6 {
 }
 
 a,
-a:link,
 a:visited,
-a:hover,
 a:active {
   color: #000000;
   text-decoration: none;
+}
+
+a {
+  color: #cd5c5c;
+}
+
+a:visited {
+  color: #d29c9c;
 }
 
 ul, li {
